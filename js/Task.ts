@@ -4,9 +4,7 @@ import LocalStorage from './LocalStorage.js';
 import localStorage from "./LocalStorage.js";
 
 class Task implements ITask{
-
-    private id:number;
-
+    id:number;
     constructor(private _titre:string, private _description:string, private _date:string, private _level:string){
         this.id = Date.now();
     }
@@ -26,7 +24,7 @@ class Task implements ITask{
     }
 
     deleteTask(){
-
+        LocalStorage.deleteTask(this.id);
     }
 
     modifyTask(){

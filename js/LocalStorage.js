@@ -5,11 +5,8 @@ var LocalStorage = /** @class */ (function () {
     }
     // on recuper la tache du formulaire et on l'ajoute dans le localStorage
     LocalStorage.createTask = function (task) {
-        console.log("createTask");
-        console.log(task);
         var tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
         tasks.push(task);
-        console.log(tasks);
         localStorage.setItem("tasks", JSON.stringify(tasks));
     };
     // recupérer toutes les taches
@@ -17,9 +14,14 @@ var LocalStorage = /** @class */ (function () {
         var tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
         return tasks;
     };
-    LocalStorage.deleteTask = function (task) {
+    //supprimer une tache
+    LocalStorage.deleteTask = function (id) {
+        var tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+        tasks = tasks.filter(function (task) { return task.id !== id; });
+        localStorage.setItem("tasks", JSON.stringify(tasks));
     };
     LocalStorage.deleteAllTask = function () {
+        localStorage.removeItem("tasks");
     };
     LocalStorage.updateTask = function (task) {
     };

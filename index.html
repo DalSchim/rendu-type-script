@@ -30,9 +30,12 @@
                     <option value="medium" selected>Moyenne</option>
                     <option value="high">Haute</option>
                 </select>
+
                 <button type="submit">Ajouter Tâche</button>
             </form>
         </section>
+
+
         <section id="task-filter">
             <h2>Filtrer les Tâches</h2>
             <form id="filterForm">
@@ -43,7 +46,6 @@
                     <option value="medium">Moyenne</option>
                     <option value="low">Faible</option>
                 </select>
-
                 <label for="filterDate">Filtrer par Date :</label>
                 <input type="date" id="filterDate">
 
@@ -54,7 +56,9 @@
         <section id="task-list">
             <h2>Liste des Tâches</h2>
             <div id="tasks">
-                <div id="tasks">
+                <div id="taskss">
+                    <ul id="tasksList">
+                    </ul>
                     <div class="task high">
                         <h3>Titre de la Tâche 1 <span>– Priorité Haute</span></h3>
                         <p>Date d'échéance: 2024-03-01</p>
@@ -69,15 +73,7 @@
                         <button type="button">Supprimer</button>
                         <button class="edit-btn">Modifier</button>
                     </div>
-                    <div class="task low">
-                        <h3>Titre de la Tâche 3 <span>– Priorité Faible</span></h3>
-                        <p>Date d'échéance: 2024-03-10</p>
-                        <p>Description de la tâche 3...</p>
-                        <button type="button">Supprimer</button>
-                        <button class="edit-btn">Modifier</button>
-                    </div>
                 </div>
-
             </div>
         </section>
     </main>

@@ -20,6 +20,7 @@ var Task = /** @class */ (function () {
         });
     };
     Task.prototype.deleteTask = function () {
+        LocalStorage.deleteTask(this.id);
     };
     Task.prototype.modifyTask = function () {
     };
